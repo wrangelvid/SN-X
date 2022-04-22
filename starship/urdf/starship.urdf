@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="starship">
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="0.63402 0.91199 -0.00013286"
+        rpy="0 0 0" />
+      <mass
+        value="75806" />
+      <inertia
+        ixx="1293500"
+        ixy="5.3258E-09"
+        ixz="3212.3"
+        iyy="14695000"
+        iyz="5.2894E-12"
+        izz="14695000" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/body.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/body.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_Leg_R">
+    <inertial>
+      <origin
+        xyz="-2.2787E-05 -1.8808 0.0011883"
+        rpy="0 0 0" />
+      <mass
+        value="3334.5" />
+      <inertia
+        ixx="5374.2"
+        ixy="-4459.8"
+        ixz="-1.9212E-11"
+        iyy="45100"
+        iyz="-8.6282E-13"
+        izz="50379" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Leg_R.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Leg_R.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Leg_R"
+    type="revolute">
+    <origin
+      xyz="-15.067 -3.9987 -0.0011883"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="Link_Leg_R" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_Leg_L">
+    <inertial>
+      <origin
+        xyz="-2.2787E-05 1.8808 0.0011883"
+        rpy="0 0 0" />
+      <mass
+        value="3334.5" />
+      <inertia
+        ixx="5374.2"
+        ixy="4459.8"
+        ixz="-8.7792E-13"
+        iyy="45100"
+        iyz="-1.0595E-12"
+        izz="50379" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Leg_L.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Leg_L.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Leg_L"
+    type="revolute">
+    <origin
+      xyz="-15.067 5.8227 -0.0011883"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="Link_Leg_L" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm_R">
+    <inertial>
+      <origin
+        xyz="0.223625980794317 -1.24164588938307 0.00118831182493209"
+        rpy="0 0 0" />
+      <mass
+        value="1190.58892028126" />
+      <inertia
+        ixx="1250.12495990922"
+        ixy="-1198.92734728176"
+        ixz="-2.7200464555524E-12"
+        iyy="4056.16406773237"
+        iyz="3.46944700963317E-13"
+        izz="5273.28858337845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Arm_R.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Arm_R.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_R"
+    type="revolute">
+    <origin
+      xyz="17.987 -3.7436 -0.0011883"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="Link_Arm_R" />
+    <axis
+      xyz="-0.98416 -0.17726 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_Arm_L">
+    <inertial>
+      <origin
+        xyz="0.22363 1.2416 0.0011883"
+        rpy="0 0 0" />
+      <mass
+        value="1190.6" />
+      <inertia
+        ixx="1250.1"
+        ixy="1198.9"
+        ixz="-1.5689E-12"
+        iyy="4056.2"
+        iyz="6.1085E-15"
+        izz="5273.3" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Arm_L.obj" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Arm_L.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Arm_L"
+    type="revolute">
+    <origin
+      xyz="17.987 5.5676 -0.0011883"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="Link_Arm_L" />
+    <axis
+      xyz="-0.98416 0.17726 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
