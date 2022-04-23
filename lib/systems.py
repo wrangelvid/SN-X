@@ -1,5 +1,5 @@
 from pydrake.all import (LeafSystem_, AbstractValue,
-                        ExternallyAppliedSpatialForce, TemplateSystem,
+                        ExternallyAppliedSpatialForce_, TemplateSystem,
                         RigidTransform)
 import numpy as np
 
@@ -10,11 +10,11 @@ def SpatialForceConcatinator_(T):
             LeafSystem_[T].__init__(self, converter)
             self.N_inputs = N_inputs
             self.Input_ports = [self.DeclareAbstractInputPort(f"Spatial_Force_{i}",
-                                AbstractValue.Make([ExternallyAppliedSpatialForce()])) for i in range(N_inputs)]
+                                AbstractValue.Make([ExternallyAppliedSpatialForce_[T]()])) for i in range(N_inputs)]
         
             self.DeclareAbstractOutputPort("Spatial_Forces",
                                            lambda: AbstractValue.Make(
-                                               [ExternallyAppliedSpatialForce()for i in range(N_inputs)]),
+                                               [ExternallyAppliedSpatialForce_[T]()for i in range(N_inputs)]),
                                            self.Concatenate)
 
         def Concatenate(self, context, output):
