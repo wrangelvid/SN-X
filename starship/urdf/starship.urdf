@@ -98,9 +98,7 @@
       xyz="-1 0 0" />
     <limit
       lower="-1.57"
-      upper="1.57"
-      effort="0"
-      velocity="0" />
+      upper="1.57"/>
   </joint>
   <link
     name="Link_Leg_L">
@@ -156,9 +154,7 @@
       xyz="-1 0 0" />
     <limit
       lower="-1.57"
-      upper="1.57"
-      effort="0"
-      velocity="0" />
+      upper="1.57"/>
   </joint>
   <link
     name="Link_Arm_R">
@@ -214,9 +210,7 @@
       xyz="-0.98416 -0.17726 0" />
     <limit
       lower="-1.57"
-      upper="1.57"
-      effort="0"
-      velocity="0" />
+      upper="1.57"/>
   </joint>
   <link
     name="Link_Arm_L">
@@ -272,8 +266,34 @@
       xyz="-0.98416 0.17726 0" />
     <limit
       lower="-1.57"
-      upper="1.57"
-      effort="0"
-      velocity="0" />
+      upper="1.57"/>
   </joint>
+
+  <transmission type="SimpleTransmission" name="Actuator_Leg_R">
+      <actuator name="Motor_Leg_R"></actuator>
+      <joint name="Joint_Leg_R"></joint>
+      <mechanicalreduction>1</mechanicalreduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+  </transmission> 
+
+  <transmission type="SimpleTransmission" name="Actuator_Leg_L">
+      <actuator name="Motor_Leg_L"></actuator>
+      <joint name="Joint_Leg_L"></joint>
+      <mechanicalreduction>1</mechanicalreduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+  </transmission> 
+
+  <transmission type="SimpleTransmission" name="Actuator_Arm_R">
+      <actuator name="Motor_Arm_R"></actuator>
+      <joint name="Joint_Arm_R"></joint>
+      <mechanicalreduction>1</mechanicalreduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+  </transmission> 
+
+  <transmission type="SimpleTransmission" name="Actuator_Arm_L">
+      <actuator name="Motor_Arm_L"></actuator>
+      <joint name="Joint_Arm_L"></joint>
+      <mechanicalreduction>1</mechanicalreduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+  </transmission> 
 </robot>
