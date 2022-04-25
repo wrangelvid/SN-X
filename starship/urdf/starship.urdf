@@ -14,10 +14,10 @@
         value="75806" />
       <inertia
         ixx="1293500"
-        ixy="5.3258E-09"
+        ixy="5.3286E-09"
         ixz="3212.3"
         iyy="14695000"
-        iyz="5.2894E-12"
+        iyz="5.3029E-12"
         izz="14695000" />
     </inertial>
     <visual>
@@ -57,7 +57,7 @@
         ixy="-4459.8"
         ixz="-1.9212E-11"
         iyy="45100"
-        iyz="-8.6282E-13"
+        iyz="-8.3506E-13"
         izz="50379" />
     </inertial>
     <visual>
@@ -160,17 +160,17 @@
     name="Link_Arm_R">
     <inertial>
       <origin
-        xyz="0.223625980794317 -1.24164588938307 0.00118831182493209"
+        xyz="-9.3823E-06 -1.2616 1.2507E-08"
         rpy="0 0 0" />
       <mass
-        value="1190.58892028126" />
+        value="1190.6" />
       <inertia
-        ixx="1250.12495990922"
-        ixy="-1198.92734728176"
-        ixz="-2.7200464555524E-12"
-        iyy="4056.16406773237"
-        iyz="3.46944700963317E-13"
-        izz="5273.28858337845" />
+        ixx="919.98"
+        ixy="-634.06"
+        ixz="-0.59721"
+        iyy="4386.3"
+        iyz="-0.83543"
+        izz="5273.3" />
     </inertial>
     <visual>
       <origin
@@ -183,7 +183,7 @@
       <material
         name="">
         <color
-          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+          rgba="0.77647 0.75686 0.73725 1" />
       </material>
     </visual>
     <collision>
@@ -201,13 +201,13 @@
     type="revolute">
     <origin
       xyz="17.987 -3.7436 -0.0011883"
-      rpy="0 0 0" />
+      rpy="-0.00094188 0 0.1782" />
     <parent
       link="body" />
     <child
       link="Link_Arm_R" />
     <axis
-      xyz="-0.98416 -0.17726 0" />
+      xyz="-1 0 0" />
     <limit
       lower="-1.57"
       upper="1.57"/>
@@ -216,16 +216,16 @@
     name="Link_Arm_L">
     <inertial>
       <origin
-        xyz="0.22363 1.2416 0.0011883"
+        xyz="-6.7609E-06 1.2616 2.6215E-08"
         rpy="0 0 0" />
       <mass
         value="1190.6" />
       <inertia
-        ixx="1250.1"
-        ixy="1198.9"
-        ixz="-1.5689E-12"
-        iyy="4056.2"
-        iyz="6.1085E-15"
+        ixx="919.98"
+        ixy="634.06"
+        ixz="-0.5972"
+        iyy="4386.3"
+        iyz="0.83542"
         izz="5273.3" />
     </inertial>
     <visual>
@@ -257,13 +257,13 @@
     type="revolute">
     <origin
       xyz="17.987 5.5676 -0.0011883"
-      rpy="0 0 0" />
+      rpy="0.00094187 0 -0.1782" />
     <parent
       link="body" />
     <child
       link="Link_Arm_L" />
     <axis
-      xyz="-0.98416 0.17726 0" />
+      xyz="-1 0 0" />
     <limit
       lower="-1.57"
       upper="1.57"/>
@@ -296,4 +296,32 @@
       <mechanicalreduction>1</mechanicalreduction>
       <hardwareInterface>VelocityJointInterface</hardwareInterface>
   </transmission> 
+
+  <drake:collision_filter_group name="group1">
+    <drake:member link="Link_Leg_L"/>
+    <drake:ignored_collision_filter_group name="group2"/>
+    <drake:ignored_collision_filter_group name="group3"/>
+    <drake:ignored_collision_filter_group name="group4"/>
+  </drake:collision_filter_group>
+
+  <drake:collision_filter_group name="group2">
+    <drake:member link="Link_Leg_R"/>
+    <drake:ignored_collision_filter_group name="group1"/>
+    <drake:ignored_collision_filter_group name="group3"/>
+    <drake:ignored_collision_filter_group name="group4"/>
+  </drake:collision_filter_group>
+
+  <drake:collision_filter_group name="group3">
+    <drake:member link="Link_Arm_L"/>
+    <drake:ignored_collision_filter_group name="group2"/>
+    <drake:ignored_collision_filter_group name="group1"/>
+    <drake:ignored_collision_filter_group name="group4"/>
+  </drake:collision_filter_group>
+
+  <drake:collision_filter_group name="group4">
+    <drake:member link="Link_Arm_R"/>
+    <drake:ignored_collision_filter_group name="group2"/>
+    <drake:ignored_collision_filter_group name="group3"/>
+    <drake:ignored_collision_filter_group name="group1"/>
+  </drake:collision_filter_group>
 </robot>
