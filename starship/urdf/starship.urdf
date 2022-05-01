@@ -269,34 +269,6 @@
       upper="1.57"/>
   </joint>
 
-  <transmission type="SimpleTransmission" name="Actuator_Leg_R">
-      <actuator name="Motor_Leg_R"></actuator>
-      <joint name="Joint_Leg_R"></joint>
-      <mechanicalreduction>1</mechanicalreduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
-  </transmission> 
-
-  <transmission type="SimpleTransmission" name="Actuator_Leg_L">
-      <actuator name="Motor_Leg_L"></actuator>
-      <joint name="Joint_Leg_L"></joint>
-      <mechanicalreduction>1</mechanicalreduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
-  </transmission> 
-
-  <transmission type="SimpleTransmission" name="Actuator_Arm_R">
-      <actuator name="Motor_Arm_R"></actuator>
-      <joint name="Joint_Arm_R"></joint>
-      <mechanicalreduction>1</mechanicalreduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
-  </transmission> 
-
-  <transmission type="SimpleTransmission" name="Actuator_Arm_L">
-      <actuator name="Motor_Arm_L"></actuator>
-      <joint name="Joint_Arm_L"></joint>
-      <mechanicalreduction>1</mechanicalreduction>
-      <hardwareInterface>VelocityJointInterface</hardwareInterface>
-  </transmission> 
-
   <drake:collision_filter_group name="group1">
     <drake:member link="Link_Leg_L"/>
     <drake:ignored_collision_filter_group name="group2"/>
