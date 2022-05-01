@@ -8,16 +8,16 @@
     name="body">
     <inertial>
       <origin
-        xyz="0.63402 0.91199 -0.00013286"
+        xyz="-0.054083 -7.3943E-06 -0.00013286"
         rpy="0 0 0" />
       <mass
         value="75806" />
       <inertia
         ixx="1293500"
-        ixy="5.3286E-09"
+        ixy="5.3291E-09"
         ixz="3212.3"
         iyy="14695000"
-        iyz="5.3029E-12"
+        iyz="5.3016E-12"
         izz="14695000" />
     </inertial>
     <visual>
@@ -57,7 +57,7 @@
         ixy="-4459.8"
         ixz="-1.9212E-11"
         iyy="45100"
-        iyz="-8.3506E-13"
+        iyz="-8.6282E-13"
         izz="50379" />
     </inertial>
     <visual>
@@ -88,7 +88,7 @@
     name="Joint_Leg_R"
     type="revolute">
     <origin
-      xyz="-15.067 -3.9987 -0.0011883"
+      xyz="-15.755 -4.9107 -0.0011883"
       rpy="0 0 0" />
     <parent
       link="body" />
@@ -144,7 +144,7 @@
     name="Joint_Leg_L"
     type="revolute">
     <origin
-      xyz="-15.067 5.8227 -0.0011883"
+      xyz="-15.755 4.9107 -0.0011883"
       rpy="0 0 0" />
     <parent
       link="body" />
@@ -200,7 +200,7 @@
     name="Joint_Arm_R"
     type="revolute">
     <origin
-      xyz="17.987 -3.7436 -0.0011883"
+      xyz="17.299 -4.6556 -0.0011883"
       rpy="-0.00094188 0 0.1782" />
     <parent
       link="body" />
@@ -256,7 +256,7 @@
     name="Joint_Arm_L"
     type="revolute">
     <origin
-      xyz="17.987 5.5676 -0.0011883"
+      xyz="17.299 4.6556 -0.0011883"
       rpy="0.00094187 0 -0.1782" />
     <parent
       link="body" />
