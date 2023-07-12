@@ -3,22 +3,22 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="starship">
+  name="starship-mini">
   <link
     name="body">
     <inertial>
       <origin
-        xyz="-0.054083 -7.3943E-06 -0.00013286"
+        xyz="0.00040217 -1.0547E-15 0.0011895"
         rpy="0 0 0" />
       <mass
-        value="75806" />
+        value="119.07" />
       <inertia
-        ixx="1293500"
-        ixy="5.3291E-09"
-        ixz="3212.3"
-        iyy="14695000"
-        iyz="5.3016E-12"
-        izz="14695000" />
+        ixx="3.1118"
+        ixy="-7.9288E-13"
+        ixz="2.245E-05"
+        iyy="36.378"
+        iyz="-2.1445E-15"
+        izz="36.379" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="Link_Leg_R">
     <inertial>
       <origin
-        xyz="-2.2787E-05 -1.8808 0.0011883"
+        xyz="0.00042808 -0.075147 0.0011883"
         rpy="0 0 0" />
       <mass
-        value="3334.5" />
+        value="5.4307" />
       <inertia
-        ixx="5374.2"
-        ixy="-4459.8"
-        ixz="-1.9212E-11"
-        iyy="45100"
-        iyz="-8.6282E-13"
-        izz="50379" />
+        ixx="0.014344"
+        ixy="-0.011727"
+        ixz="-3.1322E-14"
+        iyy="0.11851"
+        iyz="-3.6568E-14"
+        izz="0.1322" />
     </inertial>
     <visual>
       <origin
@@ -88,7 +88,7 @@
     name="Joint_Leg_R"
     type="revolute">
     <origin
-      xyz="-15.755 -4.9107 -0.0011883"
+      xyz="-0.6302 -0.19643 0"
       rpy="0 0 0" />
     <parent
       link="body" />
@@ -104,17 +104,17 @@
     name="Link_Leg_L">
     <inertial>
       <origin
-        xyz="-2.2787E-05 1.8808 0.0011883"
+        xyz="0.00042808 0.075147 0.0011883"
         rpy="0 0 0" />
       <mass
-        value="3334.5" />
+        value="5.4307" />
       <inertia
-        ixx="5374.2"
-        ixy="4459.8"
-        ixz="-8.7792E-13"
-        iyy="45100"
-        iyz="-1.0595E-12"
-        izz="50379" />
+        ixx="0.014344"
+        ixy="0.011727"
+        ixz="-2.9461E-16"
+        iyy="0.11851"
+        iyz="8.2908E-20"
+        izz="0.1322" />
     </inertial>
     <visual>
       <origin
@@ -144,14 +144,14 @@
     name="Joint_Leg_L"
     type="revolute">
     <origin
-      xyz="-15.755 4.9107 -0.0011883"
+      xyz="-0.6302 0.19643 0"
       rpy="0 0 0" />
     <parent
       link="body" />
     <child
       link="Link_Leg_L" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
       lower="-1.57"
       upper="1.57"/>
@@ -160,17 +160,17 @@
     name="Link_Arm_R">
     <inertial>
       <origin
-        xyz="-9.3823E-06 -1.2616 1.2507E-08"
+        xyz="0.00014768 -0.050416 0.0011883"
         rpy="0 0 0" />
       <mass
-        value="1190.6" />
+        value="1.9535" />
       <inertia
-        ixx="919.98"
-        ixy="-634.06"
-        ixz="-0.59721"
-        iyy="4386.3"
-        iyz="-0.83543"
-        izz="5273.3" />
+        ixx="0.0024956"
+        ixy="-0.0016703"
+        ixz="3.6378E-17"
+        iyy="0.011631"
+        iyz="-6.6753E-18"
+        izz="0.013902" />
     </inertial>
     <visual>
       <origin
@@ -200,8 +200,8 @@
     name="Joint_Arm_R"
     type="revolute">
     <origin
-      xyz="17.299 -4.6556 -0.0011883"
-      rpy="-0.00094188 0 0.1782" />
+      xyz="0.69204 -0.18622 0"
+      rpy="0 0 0.1782" />
     <parent
       link="body" />
     <child
@@ -216,17 +216,17 @@
     name="Link_Arm_L">
     <inertial>
       <origin
-        xyz="-6.7609E-06 1.2616 2.6215E-08"
+        xyz="0.00014768 0.050416 0.0011883"
         rpy="0 0 0" />
       <mass
-        value="1190.6" />
+        value="1.9535" />
       <inertia
-        ixx="919.98"
-        ixy="634.06"
-        ixz="-0.5972"
-        iyy="4386.3"
-        iyz="0.83542"
-        izz="5273.3" />
+        ixx="0.0024956"
+        ixy="0.0016703"
+        ixz="-1.7101E-14"
+        iyy="0.011631"
+        iyz="2.3179E-14"
+        izz="0.013902" />
     </inertial>
     <visual>
       <origin
@@ -256,14 +256,14 @@
     name="Joint_Arm_L"
     type="revolute">
     <origin
-      xyz="17.299 4.6556 -0.0011883"
-      rpy="0.00094187 0 -0.1782" />
+      xyz="0.69204 0.18622 0"
+      rpy="0 0 -0.1782" />
     <parent
       link="body" />
     <child
       link="Link_Arm_L" />
     <axis
-      xyz="1 0 0" />
+      xyz="-1 0 0" />
     <limit
       lower="-1.57"
       upper="1.57"/>
